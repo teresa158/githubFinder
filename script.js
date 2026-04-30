@@ -31,8 +31,10 @@ function displayprofile(user){
     <p>${user.bio || "No bio available"}</p>
     <button class="add-favorites"> Add to favorites </button>
     <a href="${user.html_url}" target="_blank">View on GitHub</a>
+    
     `
 }
+
 
 // Afficher et remplir le f-container
 function displayfcontainer(user){
@@ -53,3 +55,18 @@ function displayfcontainer(user){
     </div> 
  `
 }
+
+// Afficher et remplir la liste des repos
+function displayRepos(repos){
+    reposList.innerHTML = repos.map(repo => `
+        <div class="repo-card">
+            <h3>${repo.name}</h3>
+            <p>${repo.description || "No description"}</p>
+            <div class="repo-info">
+                <span>⭐ ${repo.stargazers_count}</span>
+                <a href="${repo.html_url}" target="_blank">View</a>
+            </div>
+        </div>
+    `).join("");
+}
+

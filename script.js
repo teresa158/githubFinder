@@ -33,3 +33,23 @@ function displayprofile(user){
     <a href="${user.html_url}" target="_blank">View on GitHub</a>
     `
 }
+
+// Afficher et remplir le f-container
+function displayfcontainer(user){
+    fcontainer.innerHTML =  ` 
+    <div class="repositories">
+    <h2 class="public-repos">Public Repositories</h2>
+    <p id="repos-count">${user.public_repos}</p>
+    </div>
+
+    <div class="followers">
+    <h2 class="followers">Followers</h2>
+    <p id="followers-count">${user.followers}</p>
+    </div>
+
+    <div class="following">
+    <h2 class="following">Following</h2>
+    <p id="following-count">${user.following}</p>
+    </div> 
+ `
+}

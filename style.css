@@ -246,3 +246,95 @@ footer{
 #profile a:hover {
   color: #93c5fd;
 }
+
+/*fcontainer*/
+#f-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#f-container div {
+  flex: 1;
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  position: relative;
+  transition: 0.3s;
+}
+
+#f-container div:hover {
+  transform: translateY(-5px);
+}
+
+/* TITRES */
+#f-container h2 {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
+
+/* NUMBERS */
+#f-container p {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* ICON STYLE (fake with before) */
+.repositories::before,
+.followers::before,
+.following::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #3b82f6;
+  border-radius: 5px;
+}
+
+/* DIFFERENT COLORS */
+.repositories p {
+  color: #e2e8f0;
+}
+
+.followers p {
+  color: #e2e8f0;
+}
+
+.following p {
+  color: #e2e8f0;
+}
+
+/* GREEN % TEXT */
+.repositories::after {
+  content: "+12%";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #22c55e;
+  font-size: 14px;
+}
+
+.followers::after {
+  content: "+4k";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #22c55e;
+  font-size: 14px;
+}
+
+.following::after {
+  content: "0%";
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #94a3b8;
+  font-size: 14px;
+}

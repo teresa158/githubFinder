@@ -78,3 +78,13 @@ function showLoading() {
     userProfile.style.display = "none";
     reposList.style.display = "none";
 }
+
+// Afficher le message d'erreur
+function showError(message) {
+    error.style.display = "block";
+    error.textContent = message;
+    loading.style.display = "none";
+    userProfile.style.display = "none";
+    reposList.style.display = "none";
+}
+

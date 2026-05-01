@@ -11,6 +11,7 @@ const userProfile = document.getElementById('userprofile');
 const profile = document.getElementById('profil');
 const fcontainer = document.getElementById('f-container');
 const reposList = document.getElementById('reposities');
+const welcomeState = document.getElementById('welcomeState');
 const loading = document.getElementById('loading');
 const error = document.getElementById('error');
 const Favorites = document.getElementById('Favorites');
@@ -77,6 +78,7 @@ function showLoading() {
     error.style.display = "none";
     userProfile.style.display = "none";
     reposList.style.display = "none";
+    welcomeState.style.display = "none";
 }
 
 // Afficher le message d'erreur
@@ -84,6 +86,16 @@ function showError(message) {
     error.style.display = "block";
     error.textContent = message;
     loading.style.display = "none";
+    userProfile.style.display = "none";
+    reposList.style.display = "none";
+    welcomeState.style.display = "none";
+}
+
+// Afficher le welcome state
+function showWelcomeState() {
+    welcomeState.style.display = "block";
+    loading.style.display = "none";
+    error.style.display = "none";
     userProfile.style.display = "none";
     reposList.style.display = "none";
 }

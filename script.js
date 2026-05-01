@@ -58,6 +58,7 @@ function displayfcontainer(user){
 
 // Afficher et remplir la liste des repos
 function displayRepos(repos){
+    reposList.innerHTML = "";
     reposList.innerHTML = repos.map(repo => `
         <div class="repo-card">
             <h3>${repo.name}</h3>
@@ -70,3 +71,10 @@ function displayRepos(repos){
     `).join("");
 }
 
+// Afficher le loader
+function showLoading() {
+    loading.style.display = "block";
+    error.style.display = "none";
+    userProfile.style.display = "none";
+    reposList.style.display = "none";
+}
